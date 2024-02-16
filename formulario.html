@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro de Cliente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section>
+            <form action="">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu Nome" autocomplete="off" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu Email" autocomplete="on" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="Digite seu Telefone" autocomplete="on" required>
+
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" required>
+
+                <label for="rg">RG:</label>
+                <input type="text" id="rg" name="rg" placeholder="Digite seu RG" required>
+
+                <label for="dataNascimento">Data de Nascimento:</label>
+                <input type="date" id="dataNascimento" name="dataNascimento" placeholder="Digite sua data de nascimento" required>
+
+                <label for="localizacao">Localização:</label>
+                <input type="text" id="localizacao" name="localizacao" placeholder="Digite sua Localização" required>
+
+                <label for="nomeMae">Nome da Mãe:</label>
+                <input type="text" id="nomeMae" name="nomeMae" placeholder="Digite o nome de sua mãe" required>
+
+                <label for="nomePai">Nome do Pai:</label>
+                <input type="text" id="nomePai" name="nomePai" placeholder="Digite o nome de seu pai" required>
+
+                <label for="estadoCivil">Estado Civil:</label>
+                <select id="estadoCivil" name="estadoCivil" required>
+                    <option value="solteiro">Solteiro(a)</option>
+                    <option value="casado">Casado(a)</option>
+                    <option value="divorciado">Divorciado(a)</option>
+                    <option value="viuvo">Viúvo(a)</option>
+                </select>
+
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" name="sexo" required>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <script> function mostrarAlerta() 
+                { let inputs = document.querySelectorAll("input[required], select[required]"); 
+                let isFormValid = true; inputs.forEach(input => { if (input.value.trim() === "") { isFormValid = false; } }); 
+                if (isFormValid) { alert("Cadastrado!"); } 
+                else { alert("Não cadastrado!"); } } </script>
+
+                <button onclick="mostrarAlerta()" type="submit">Cadastrar</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>
